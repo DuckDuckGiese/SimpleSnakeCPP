@@ -13,10 +13,34 @@ void Setup()
     x = width / 2;
     y = height / 2;
     fruitX = rand() % width;
+    fruitY = rand() % height;
+    score = 0;
 }
 void Draw()
 {
+    system("cls"); //system("clear")
+    for (int i = 0; i < width+2; i++)
+        cout << "#";
+    cout << endl;
 
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            if (j == 0)
+                cout << "#";
+
+                cout << " ";
+            
+            if (j == width - 1)
+                cout << "#";
+        }
+        cout << endl;
+    }
+
+    for (int i = 0; i < width+2; i++)
+        cout << "#";
+    cout << endl;
 }
 void Input()
 {
